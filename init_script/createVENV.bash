@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#XXX: `realpath' command has package dependency here.
 SCRIPT_PATH=$(dirname $(realpath $0))
 source "$SCRIPT_PATH/../util/bash/PythonChecker.bash"
 
@@ -46,5 +47,5 @@ function installVirtualEnv() {
 
     python2 -m virtualenv $venvPath
 }
-installVirtualEnv ../backend/venv/
+installVirtualEnv $SCRIPT_PATH/../backend/venv/
 

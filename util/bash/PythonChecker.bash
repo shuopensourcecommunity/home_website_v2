@@ -36,9 +36,9 @@ function checkPythonModel() {
     local ret=$(python2 -m pip show $model | awk '/Version/{print $2;}')
 
     if [ $version = 'ANY' ]; then
-        [ $ret != '' ] && { echo True; return 0; }
+        [ "$ret" != '' ] && { echo True; return 0; }
     else
-        [ $ret = $version ] && { echo True; return 0; }
+        [ "$ret" = $version ] && { echo True; return 0; }
     fi
     echo False
 }
