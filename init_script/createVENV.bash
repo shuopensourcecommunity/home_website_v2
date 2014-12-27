@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#XXX: `realpath' command has package dependency here.
-SCRIPT_PATH=$(dirname $(realpath $0))
+SCRIPT_PATH=$(cd "$(dirname "$0")"; pwd)
 source "$SCRIPT_PATH/../util/bash/PythonChecker.bash"
 
 if [ $(checkPython) = 'True' ]; then
