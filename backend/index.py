@@ -9,12 +9,15 @@ url rules:
 	/home: home
 
 	/general :  a bref introduce to our community
+		/general/member:  introduce to our members
 
 	/activity : student activities
 
 	/project:  community project
 
 	/contact:  contanct us
+
+	/parterner :  our supporter and parterners
 
 '''
 
