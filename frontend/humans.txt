@@ -3,6 +3,10 @@
 /* TEAM */
     Developer:  Ma Yiqing
     Github:     https://github.com/sorcerer-ma
+    
+    Developer:  Simon Zheng
+    GitHub:     https://github.com/bucketzxm
+    GitCafe:    https://gitcafe.com/bucketzxm
 
 /* THANKS */
     UCloud:     http://www.ucloud.cn/
