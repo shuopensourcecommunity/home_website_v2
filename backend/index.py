@@ -2,7 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask.views import View
 from flask.views import MethodView
-
+from flask import g
+import sqlite3
 # import models
 from activityModel import ActivityAPI
 
@@ -17,8 +18,17 @@ def connect_db():
 	Connects to the database
 	'''
 	rv = sqlite3.connect( app.config['DATABASE'] )
-	rv.row_factory = sqlite3.Row
 	return rv
+
+@app.before_request
+def before_request():
+	g.db = connect_db()
+
+@app.teardown_request
+def teardown_request(exception):
+	if hasattr(g,'db'):
+		g.db.close()
+
 
 
 @app.route('/')
@@ -29,8 +39,6 @@ def index():
 @app.errorhandler(404)
 def not_found(error):
 	pass
-
-
 
 activity_view = ActivityAPI.as_view('activity_api')
 app.add_url_rule('/activity/',defaults={},
