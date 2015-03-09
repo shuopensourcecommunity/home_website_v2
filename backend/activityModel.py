@@ -4,7 +4,7 @@ from flask.views import MethodView
 
 class ActivityAPI(MethodView):
 	def get(self):
-		pass
+		return "this is get"
 	def post(self):
 		pass
 	def delete(self):
