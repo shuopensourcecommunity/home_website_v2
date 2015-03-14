@@ -5,7 +5,7 @@ from flask.views import MethodView
 from flask import g
 import sqlite3,os
 from flask.ext.sqlalchemy import SQLAlchemy
-from activityAPI import ActivityAPI
+from Api import ActivityAPI
 basedir = os.path.abspath( os.path.dirname(__file__))
 app = Flask(__name__)
 app.debug = True

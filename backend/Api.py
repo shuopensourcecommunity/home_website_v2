@@ -21,3 +21,39 @@ class ActivityAPI(MethodView):
 		pass
 	def put(self):
 		pass
+
+
+class ProjectAPI(MethodView):
+	def get(self,*args,**kwargs):
+		pass
+	
+	def post(self):
+		pass
+	def delete(self):
+		pass
+	def put(self):
+		pass
+
+
+class MemberAPI(MethodView):
+	def get(self,*args,**kwargs):
+		pass
+	def post(self):
+		pass
+	def delete(self):
+		pass
+	def put(self):
+		pass
+
+
+class PartnerAPI(MethodView):
+	def get(self,*args,**kwargs):
+		pass
+	def post(self):
+		pass
+	def delete(self):
+		pass
+	def put(self):
+		pass
+
+
