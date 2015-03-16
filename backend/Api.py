@@ -5,11 +5,10 @@ from flask.views import MethodView
 from flask import jsonify
 from flask import make_response 
 
-import pdb
 
+from index import Activity
 class ActivityAPI(MethodView):
 	def get(self,*args,**kwargs):
-		from index import Activity
 		data = Activity.query.filter_by(id=kwargs['user_id']).first()
 		data_json = { kwargs['resource'] : data.__getattribute__(kwargs['resource'])}
 		data_json = jsonify(data_json)

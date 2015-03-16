@@ -52,12 +52,11 @@ class Project(db.Model):
 	developer = db.Column(db.Text,unique=True)
 	link = db.Column(db.Text,unique=True)
 
-
 	def __repr__(self):
 		return '<Project: %s>' % self.name 
 
 class Member(db.Model):
-	__tablename__ = "project"
+	__tablename__ = "member"
 	id = db.Column(db.Integer,primary_key=True)
 	role = db.Column( db.String(64),unique=True)
 	name = db.Column( db.String(64), unique=True)
@@ -66,7 +65,7 @@ class Member(db.Model):
 		return '<Member:%s, Role:%s>' % (self,name,self.role)
 
 class Partner(db.Model):
-	__tablename__ == "partner"
+	__tablename__ = "partner"
 	id = db.Column(db.Integer,primary_key=True)
 	name = db.Column(db.String(64),unique=True)
 	logo = db.Column(db.Text,unique=True)
