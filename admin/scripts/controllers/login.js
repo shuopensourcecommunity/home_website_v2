@@ -1,5 +1,9 @@
 'use strict';
 angular.module('oscApp')
-.controller('LoginCtrl', function($scope){
-	// TODO
-});
+.controller('LoginCtrl',['$scope', function($scope){
+
+	$scope.username = "hello";
+	$scope.password = "";
+	$scope.submit = function(){
+	};
+}]);

@@ -16,6 +16,7 @@ class ActivityAPI(MethodView):
 	def put(self):
 		pass
 
+
 class ProjectAPI(MethodView):
 	def get(self,*args,**kwargs):
 		data = model.Project.query.filter_by(id=kwargs['project_id']).first()
