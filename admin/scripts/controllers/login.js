@@ -2,8 +2,9 @@
 angular.module('oscApp')
 .controller('LoginCtrl',['$scope', function($scope){
 
-	$scope.username = "hello";
+	$scope.username = "";
 	$scope.password = "";
+	$scope.ok="";
 	$scope.submit = function(){
 	};
 }]);

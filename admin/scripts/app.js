@@ -24,6 +24,4 @@ angular
 .otherwise({
 	redirectTo: '/'
 });
-}).run(function($rootScope){
-	$rootScope.serverUrl = 'http://192.168.10.10/moewiki';
 });

@@ -1,28 +1,13 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Login in</title>
-		<link href="../vendor/bootstrap-dist/css/bootstrap.min.css" rel="stylesheet">
-
-	</head>
-
-
 	<body>
 		<p>上海大学开源社区后台管理</p>
 		<form ng-submit="submit()" ng-controller="LoginCtrl">
 			<p>Username</p>
-			<input type="text" ng-model="text" name="text" />
+			<input type="text" ng-model="username" name="username" />
 			<p>Password</p>
-			<input type="password" ng-model="text" name="password"/>
-
+			<input type="password" ng-model="password" name="password"/>
 			<input type="submit" id="submit" value="Submit" />
-
-			<p>{{text}}</p>
 		</form>
 	</body>
-
-	<script src="../vendor/angular.js"></script>
-	<script src="../scripts/controllers/app.js"></script>
-	<script src="../scripts/controllers/login.js"></script>
 </html>
