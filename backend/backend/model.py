@@ -1,6 +1,6 @@
 #!/bin/python
 
-from config import db
+from backend import db
 
 class Activity(db.Model):
 	__tablename__ = "activity"

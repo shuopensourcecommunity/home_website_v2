@@ -6,11 +6,7 @@ from flask import g
 import sqlite3,os
 from flask.ext.sqlalchemy import SQLAlchemy
 
-
-
 app = Flask(__name__)
-app.debug = True
-
 
 #Init of database
 #Use sqlite to test envirment
@@ -19,3 +15,5 @@ app.config['SQLALCHEMY_DATABASE_URI'] = \
 		'sqlite:///'+ os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 db = SQLAlchemy(app)
+
+import backend.views

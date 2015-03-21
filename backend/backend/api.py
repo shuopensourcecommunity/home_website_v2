@@ -2,6 +2,7 @@ from flask.views import MethodView
 from flask import jsonify
 from flask import make_response
 import model
+
 class ActivityAPI(MethodView):
 	def get(self,*args,**kwargs):
 		data = model.Activity.query.filter_by(id=kwargs['user_id']).first()

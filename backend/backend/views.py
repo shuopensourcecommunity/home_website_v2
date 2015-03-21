@@ -1,6 +1,5 @@
-from config import app,db
-from api import ActivityAPI,ProjectAPI
-
+from backend import app,db
+from api import ActivityAPI,ProjectAPI,MemberAPI,PartnerAPI
 # add url rules for models
 app.add_url_rule('/activity/<int:user_id>/<string:resource>',defaults={},view_func = ActivityAPI.as_view('activity_view'), methods=['GET',])
 
@@ -15,6 +14,3 @@ def index():
 	return "This is api backend"
 
 
-
-if __name__ == '__main__':
-	app.run()
