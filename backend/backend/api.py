@@ -10,8 +10,9 @@ class ActivityAPI(MethodView):
 		data_json = jsonify(data_json)
 		resp = make_response( data_json,200 )
 		return resp
-	def post(self):
+	def post(self,*args,**kwargs):
 		pass
+
 	def delete(self):
 		pass
 	def put(self):

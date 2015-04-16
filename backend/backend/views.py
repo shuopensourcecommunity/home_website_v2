@@ -9,8 +9,7 @@ app.add_url_rule('/member/<int:member_id>/<string:resource>',defaults={},view_fu
 
 app.add_url_rule('/partner/<int:partner_id>/<string:resource>',defaults={},view_func = PartnerAPI.as_view('partner_view'),methods=['GET',])
 
+
 @app.route('/')
 def index():
 	return "This is api backend"
-
-
